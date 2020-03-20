@@ -1,0 +1,11 @@
+service docker status
+docker info
+
+docker run --name mynginx -P -d nginx
+docker ps
+
+(go to localhost:32770)
+curl http://localhost:32770
+cd html
+
+ls /etc/nginx/nginx.conf
