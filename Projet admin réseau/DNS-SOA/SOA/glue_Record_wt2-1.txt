@@ -1,0 +1,2 @@
+wt2-1                   IN      NS      ns.wt2-1.ephec-ti.be.
+ns.wt2-1.ephec-ti.be.   IN      A       51.178.41.88

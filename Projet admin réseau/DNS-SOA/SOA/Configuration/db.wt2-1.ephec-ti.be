@@ -1,7 +1,7 @@
 ;
 ; BIND data file for local loopback interface
 ;
-
+$ORIGIN wt2-1.ephec-ti.be.
 $TTL	604800
 @	IN	SOA	ns.wt2-1.ephec-ti.be.	admin.wt2-1.ephec-ti.be.
 			2		; Serial
@@ -15,4 +15,4 @@ $TTL	604800
 @	IN	NS	ns.wt2-1.ephec-ti.be.
 
 ; name servers - A record
-ns	IN	A 51.178.40.12
+ns	IN	A	51.178.41.88
