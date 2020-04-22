@@ -3,7 +3,7 @@
 ;
 $ORIGIN wt2-1.ephec-ti.be.
 $TTL	604800
-@	IN	SOA	ns.wt2-1.ephec-ti.be.	admin.wt2-1.ephec-ti.be.
+@	IN	SOA	ns.wt2-1.ephec-ti.be.	admin.wt2-1.ephec-ti.be. (
 			2		; Serial
 			604800		; Refresh
 			86400		; Retry
