@@ -1,6 +1,4 @@
-;
-; BIND data file for local loopback interface
-;
+
 $ORIGIN wt2-1.ephec-ti.be.
 $TTL	604800
 @	IN	SOA	ns.wt2-1.ephec-ti.be.	admin.wt2-1.ephec-ti.be. (
