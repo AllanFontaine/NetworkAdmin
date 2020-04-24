@@ -1,0 +1,20 @@
+version : '2'
+
+services :
+  
+    soa:  
+        build: .
+        ports:
+            - "53:53/tcp"
+            - "53:53/udp"
+        networks:
+            dmz:
+                ipva4_address: 192.168.3.2
+networks:
+    dmz:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.3.0/24
+                  gateway: 192.168.3.1
