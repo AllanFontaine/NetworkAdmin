@@ -1,0 +1,32 @@
+
+//
+// Fo any local configuration here
+//
+
+// consider adding the 1918 zone here, if they are not used in your 
+// organizaiton
+//include "/etc/bind/zones.rfc1918";
+
+acl internals {	
+	51.178.41.88;
+	51.178.40.12;
+	localhost;
+};
+
+view internal {
+	match-clients { internals; };
+	recursion yes;
+	allow-recursion { internals; };
+	zone "wt2-1.ephec-ti.be" {
+        type master;
+        file "/etc/bind/db.internal.wt2-1.ephec-ti.be";
+	};
+};
+
+view external {
+	match-clients { any; };
+	zone "wt2-1.ephec-ti.be" {
+		type master;
+		file "/etc/bind/db.wt2-1.ephec-ti.be";
+	};
+};

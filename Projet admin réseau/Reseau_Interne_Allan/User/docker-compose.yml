@@ -1,0 +1,48 @@
+version : '2'
+
+services :
+  
+    DirSecretaire:  
+        build: .
+        container_name: DirSecretaire
+        networks:
+            woody_DirSecretaire:
+                ipv4_address: 192.168.0.2
+
+    ComptaComm:
+        build: .
+        container_name: ComptaComm
+        networks:
+            woody_ComptaComm:
+                ipv4_address: 192.168.1.2
+
+    Atelier:  
+        build: .
+        container_name: Atelier
+        networks:
+            woody_Atelier:
+                ipv4_address: 192.168.2.2
+networks:
+    woody_DirSecretaire:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.0.0/24
+                  gateway: 192.168.0.1
+    woody_ComptaComm:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.1.0/24
+                  gateway: 192.168.1.1
+    woody_Atelier:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.2.0/24  
+                  gateway: 192.168.2.1
+
+
