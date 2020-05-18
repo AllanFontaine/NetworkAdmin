@@ -28,3 +28,4 @@ mail._domainkey			IN	TXT	( "v=DKIM1; h=sha256; k=rsa; "
 serverWeb		IN	A			51.178.41.88
 www				IN	CNAME		serverWeb
 b2b				IN	CNAME		serverWeb
+intranet		IN	CNAME		serverWeb

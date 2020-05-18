@@ -6,7 +6,7 @@ server {
 	
 	charset utf-8;
 
-	root /var/www/exemple.com;
+	root /var/www/html;
 	index index.html;
 
 	location / {
