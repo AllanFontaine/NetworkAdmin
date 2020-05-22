@@ -28,4 +28,8 @@ mail._domainkey			IN	TXT	( "v=DKIM1; h=sha256; k=rsa; "
 serverWeb		IN	A			51.178.41.88
 www				IN	CNAME		serverWeb
 b2b				IN	CNAME		serverWeb
-intranet		IN	CNAME		serverWeb
+
+; VOIP
+_sip._udp	SRV     0       0       5060        sip 
+_sip._tcp	SRV     0       0       5060        sip
+sip			IN      A      	51.178.40.108
