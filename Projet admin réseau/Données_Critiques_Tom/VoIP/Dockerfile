@@ -5,4 +5,4 @@ RUN apt -y install git curl wget libnewt-dev libssl-dev libncurses5-dev subversi
 
 WORKDIR /etc/asterisk
 
-EXPOSE 5060
+EXPOSE 5060 10000-11000
