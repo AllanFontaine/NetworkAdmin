@@ -14,6 +14,7 @@ $TTL	604800
 
 ; name servers - A record
 ns	IN	A	51.178.41.88
+ns      IN      AAAA    2001:41d0:0304:0200:0000:0000:0000:0100
 
 ; mail servers
 mail					IN 	A		51.178.41.88
