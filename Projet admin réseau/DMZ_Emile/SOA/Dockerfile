@@ -1,9 +1,17 @@
-FROM ubuntu:16.04
-RUN apt-get update #mise a jour des logiciel present
-RUN apt-get install -y bind9 #installation de Bind9
-RUN apt-get install -y nano  #installation d'un editeur de texte
-RUN apt-get install -y dnsutils #installation de la commande "dig"
+FROM ubuntu:latest
 
-WORKDIR /etc/bind #choisir le repertoir dans lequel on travail
+RUN apt update
+RUN apt install -y bind9
+RUN apt install -y nano 
+RUN apt install -y dnsutils
 
-VOLUME /etc/bind #reserver un espace volume 
+COPY config/db.internal.wt2-1.ephec-ti.be /etc/bind 
+COPY config/db.wt2-1.ephec-ti.be /etc/bind 
+COPY config/named.conf /etc/bind 
+COPY config/named.conf.default-zones /etc/bind 
+COPY config/named.conf.local /etc/bind 
+COPY config/named.conf.options /etc/bind 
+
+WORKDIR /etc/bind 
+
+VOLUME /etc/bind
